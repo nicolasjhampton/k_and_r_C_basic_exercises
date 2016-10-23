@@ -9,6 +9,11 @@ int main() {
   nWhite = nOther = 0;
 
   /* initialize all indexes of nDigit */
+  /* forgetting to initialize index resulted in nDigit[0] being
+     whatever garbage is stored in the memory allocated to nDigit
+     at the garabge number index number held...interesting */
+  /* also note that index, when declared this way, seems to be
+     scoped to the for loop block */
   for(int index = 0; index < 10; ++index)
     nDigit[index] = 0;
 
